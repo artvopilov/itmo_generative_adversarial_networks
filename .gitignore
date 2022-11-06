@@ -1,0 +1,8 @@
+.venv/
+
+.DS_Store
+
+*.png
+
+*data/
+*images/

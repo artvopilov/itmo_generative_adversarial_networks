@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "itmo-generative-adversarial-networks"
+version = "0.1.0"
+description = ""
+authors = ["Artem Vopilov <mister.0025@yandex.ru>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+matplotlib = "^3.6.2"
+numpy = "^1.23.4"
+torch = "1.12"
+torchvision = "0.13"
+Pillow = "^9.3.0"
+tqdm = "^4.64.1"
+ipywidgets = "^8.0.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
