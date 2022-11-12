@@ -4,7 +4,5 @@
 .ipynb_checkpoints/
 .DS_Store
 
-*.png
-
-*data/
-*images/
+notebooks/data/*
+notebooks/*.png
