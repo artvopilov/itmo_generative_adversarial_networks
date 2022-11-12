@@ -40,7 +40,7 @@ class GanTrainer:
         g_losses, d_losses, real_scores, fake_scores = [], [], [], []
         for epoch in range(epochs):
             for i, (real_images, _) in enumerate(dataset_loader):
-                real_images = ImageUtils.normalize(real_images).reshape(batch_size, *input_shape).to(self._device)
+                real_images = ImageUtils.normalize(real_images).reshape(real_images.shape[0], *input_shape).to(self._device)
 
                 d_loss, real_predictions, fake_predictions = self._train_discriminator(
                     discriminator,
@@ -48,7 +48,7 @@ class GanTrainer:
                     d_optimizer,
                     loss_function,
                     real_images,
-                    batch_size,
+                    real_images.shape[0],
                     noize_shape)
 
                 g_loss, fake_images = self._train_generator(
@@ -56,7 +56,7 @@ class GanTrainer:
                     generator,
                     g_optimizer,
                     loss_function,
-                    batch_size,
+                    real_images.shape[0],
                     noize_shape)
 
                 if (i + 1) % 100 == 0:
