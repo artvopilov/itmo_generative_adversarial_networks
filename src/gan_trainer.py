@@ -1,9 +1,7 @@
 import os
-from typing import Tuple, List
+from typing import Tuple
 
-import matplotlib.pyplot as plt
 import torch
-from PIL import Image
 from torch import nn, optim
 from torch.utils.data import DataLoader, Dataset
 from torchvision.utils import save_image
